@@ -32,6 +32,8 @@ const getSpaces = (number) => {
 treeButton.addEventListener("click", function() {
     if (treeHeightInput.value === "" || treeCharacterInput.value === "") {
         window.alert("Both fields must have a value.")
+    } if (isNaN(treeHeightInput.value) === true) {
+        window.alert("Height must be a number")
     } else {
         tree(createTreeObject(treeHeightInput.value, treeCharacterInput.value))
         treeHeightInput.value = ""
